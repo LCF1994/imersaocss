@@ -1,17 +1,52 @@
-body {
+/* --- Soft Reset on CSS --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Global Styles --- */
+a{
+  color: antiquewhite; 
+  text-decoration: none; 
+ }
+ 
+ a:hover{
+   text-decoration: underline;
+  }
+  
+  /* --- Body Properties --- */
+  body {
     background-image: url("../images/main-background.jpg");
-    background-repeat: no-repeat;
     background-position: center;
     background-size: 100vw 100vh;
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 22px;
     height: 100vh;
   }
   
+  /* --- Header properties --- */
+  header {
+    height: 90vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  
   .menu{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
     border-bottom-style: solid;
     border-bottom-width: 5px;
-    border-color: #8b1615;
+    border-color: #0e680e; /* green = 0e680e, red = 8b1615*/
     
+    background: linear-gradient(#0000, #000 25% 75%, #0000);
+    box-shadow: 0em 0em 0.5em 0.05em #0e680e, inset 0em 0em 0.5em 0.05em #0e680e;
   }
   
   .menu ul {
@@ -20,17 +55,12 @@ body {
   }
   
   .menu li{
-    list-style: none;
-    text-decoration-color: antiquewhite;  
+    list-style: none; 
   }
   
-  a{
-   color: antiquewhite; 
-   text-decoration: none; 
-  }
-  
-  a:hover{
-    text-decoration: underline;
+  .menu a {
+    display: block;
+    padding: 0.62rem;
   }
   
   .site-subtitle,
@@ -38,12 +68,53 @@ body {
     color: antiquewhite;
     font-family: 'Irish Grover', cursive;
     text-align: center;
+    font-style: italic;
+    transform: rotate(-15deg);
+    transform: rotate(-15deg);
+    text-shadow: 0.22rem 0 0.68rem #ff8700, 
+                -0.22rem 0 0.68rem #26ff00, 
+                 0 -0.22rem 0.68rem #ea960a,
+                 0 0.22rem 0.68rem white;
+  }
+
+  .site-title {
+    font-size: 4em;
   }
   
   .site-subtitle{
-    font-style: italic;
+    font-size: 2.5em;
   }
-
+  
+  /* --- Portfolio Section Properties --- */
+  .portfolio{
+    margin: auto;
+    color: bisque;
+    width: 80vw;
+  }
+  
+  .portfolio h2 {
+    font-family: 'Irish Grover', cursive;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  
+  .portfolio-images {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .img-portfolio {
+    height: 180px;
+    width: 180px;
+  } 
+  
+  
+  /* --- Footer Properties --- */
   footer {
       text-align: center;
+      padding-top: 3em;
+  }
+
+  footer a {
+    font-size: 0.5em;
   }
