@@ -9,112 +9,118 @@
 a{
   color: antiquewhite; 
   text-decoration: none; 
- }
- 
- a:hover{
-   text-decoration: underline;
-  }
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+/* --- Body Properties --- */
+body {
+  background-image: url("../images/main-background.jpg");
+  background-position: center;
+  background-size: 100vw 100vh;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 22px;
+  height: 100vh;
+}
   
-  /* --- Body Properties --- */
-  body {
-    background-image: url("../images/main-background.jpg");
-    background-position: center;
-    background-size: 100vw 100vh;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 22px;
-    height: 100vh;
-  }
-  
-  /* --- Header properties --- */
-  header {
-    height: 90vh;
+/* --- Header properties --- */
+header {
+  height: 90vh;
     
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   }
   
   
-  .menu{
-    position: fixed;
-    top: 0;
-    width: 100vw;
+.menu{
+  position: fixed;
+  top: 0;
+  width: 100vw;
 
-    border-bottom-style: solid;
-    border-bottom-width: 5px;
-    border-color: #0e680e; /* green = 0e680e, red = 8b1615*/
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-color: #0e680e; /* green = 0e680e, red = 8b1615*/
     
-    background: linear-gradient(#0000, #000 25% 75%, #0000);
-    box-shadow: 0em 0em 0.5em 0.05em #0e680e, inset 0em 0em 0.5em 0.05em #0e680e;
-  }
+  background: linear-gradient(#0000, #000 25% 75%, #0000);
+  box-shadow: 0em 0em 0.5em 0.05em #0e680e, inset 0em 0em 0.5em 0.05em #0e680e;
+}
   
-  .menu ul {
-    display: flex;
-    justify-content: space-around;
-  }
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
   
-  .menu li{
-    list-style: none; 
-  }
+.menu li{
+  list-style: none; 
+}
   
-  .menu a {
-    display: block;
-    padding: 0.62rem;
-  }
+.menu a {
+  display: block;
+  padding: 0.62rem;
+}
   
-  .site-subtitle,
-  .site-title{
-    color: antiquewhite;
-    font-family: 'Irish Grover', cursive;
-    text-align: center;
-    font-style: italic;
-    transform: rotate(-15deg);
-    transform: rotate(-15deg);
-    text-shadow: 0.22rem 0 0.68rem #ff8700, 
-                -0.22rem 0 0.68rem #26ff00, 
-                 0 -0.22rem 0.68rem #ea960a,
-                 0 0.22rem 0.68rem white;
-  }
+.site-subtitle,
+.site-title{
+  color: antiquewhite;
+  font-family: 'Irish Grover', cursive;
+  text-align: center;
+  font-style: italic;
+    
+  text-shadow: 0.22rem 0 0.68rem #ff8700, 
+              -0.22rem 0 0.68rem #26ff00, 
+               0 -0.22rem 0.68rem #ea960a,
+               0 0.22rem 0.68rem white;
+}
 
-  .site-title {
-    font-size: 4em;
-  }
+.site-title {
+  font-size: 4em;
+}
   
-  .site-subtitle{
-    font-size: 2.5em;
-  }
+.site-subtitle{
+  font-size: 2.5em;
+}
   
-  /* --- Portfolio Section Properties --- */
-  .portfolio{
-    margin: auto;
-    color: bisque;
-    width: 80vw;
-  }
+/* --- Portfolio Section Properties --- */
+.portfolio{
+  margin: auto;
+  color: bisque;
+  width: 80vw;
+}
   
-  .portfolio h2 {
-    font-family: 'Irish Grover', cursive;
-    text-align: center;
-    margin-bottom: 2em;
-  }
+.portfolio h2 {
+  font-family: 'Irish Grover', cursive;
+  text-align: center;
+  margin-bottom: 2em;
+}
   
-  .portfolio-images {
-    display: flex;
-    justify-content: space-around;
-  }
+.portfolio-images {
+  display: flex;
+  justify-content: space-around;
+}
   
-  .img-portfolio {
-    height: 180px;
-    width: 180px;
-  } 
+.img-portfolio {
+  height: 200px;
+  width: 300px;
+} 
   
   
-  /* --- Footer Properties --- */
-  footer {
-      text-align: center;
-      padding-top: 3em;
-  }
+/* --- Footer Properties --- */
+footer {
+  text-align: center;
+  padding-top: 2em;
 
-  footer a {
-    font-size: 0.5em;
-  }
+  border-top-style: solid;
+  border-top-width: 0.2rem;
+  border-color: #0e680e; /* green = 0e680e, red = 8b1615*/
+    
+  background: linear-gradient(#0000, #000 25% 75%, #0000);
+  box-shadow: 0em 0em 0.5em 0.05em #0e680e, inset 0em 0em 0.5em 0.05em #0e680e;
+}
+
+footer a {
+  font-size: 0.5em;
+}
