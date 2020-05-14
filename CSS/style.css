@@ -39,6 +39,7 @@ header {
 .menu{
   position: fixed;
   top: 0;
+  z-index: 2;
   width: 100vw;
 
   border-bottom-style: solid;
@@ -67,51 +68,77 @@ header {
 .site-title{
   color: antiquewhite;
   font-family: 'Irish Grover', cursive;
-  text-align: center;
   font-style: italic;
+  text-align: center;
+
+  transform: rotate(-15deg);
     
   text-shadow: 0.22rem 0 0.68rem #ff8700, 
               -0.22rem 0 0.68rem #26ff00, 
                0 -0.22rem 0.68rem #ea960a,
-               0 0.22rem 0.68rem white;
+               0 0.22rem 0.68rem white,
+               .1em .2em 2px black;
 }
 
 .site-title {
-  font-size: 4em;
+  font-size: 3em;
+  padding-bottom: .5em;
 }
   
 .site-subtitle{
-  font-size: 2.5em;
+  font-size: 1.5em;
+}
+
+@media (min-width: 600px){
+  .site-title {
+    font-size: 4em;
+  }
+    
+  .site-subtitle{
+    font-size: 2.5em;
+  }
 }
   
-/* --- Portfolio Section Properties --- */
-.portfolio{
+/* --- Projects Section Properties --- */
+.projects{
   margin: auto;
   color: bisque;
   width: 80vw;
+  
 }
   
-.portfolio h2 {
+.projects h2 {
   font-family: 'Irish Grover', cursive;
   text-align: center;
   margin-bottom: 2em;
 }
   
-.portfolio-images {
-  display: flex;
-  justify-content: space-around;
+.projects-images {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(1, 300px);
+  
+}
+
+.projects figure{
+  text-align: center;
+  background-color: blue;
 }
   
-.img-portfolio {
+.img-projects {
   height: 200px;
   width: 300px;
+  object-fit: cover;
+  object-position: left bottom;
+
+  border-radius: .5em;
 } 
   
   
 /* --- Footer Properties --- */
 footer {
   text-align: center;
-  padding-top: 2em;
+  padding: .5em 0;
 
   border-top-style: solid;
   border-top-width: 0.2rem;
