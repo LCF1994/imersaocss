@@ -6,6 +6,11 @@
 }
 
 /* --- Global Styles --- */
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
 a{
   color: antiquewhite; 
   text-decoration: none; 
@@ -18,8 +23,10 @@ a:hover{
 /* --- Body Properties --- */
 body {
   background-image: url("../images/main-background.jpg");
+  background-repeat: no-repeat;
   background-position: center;
   background-size: 100vw 100vh;
+  background-color: black;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 22px;
   height: 100vh;
@@ -27,7 +34,7 @@ body {
   
 /* --- Header properties --- */
 header {
-  height: 90vh;
+  height: 85vh;
     
   display: flex;
   align-items: center;
@@ -73,16 +80,35 @@ header {
   background-color: cornsilk;
 }
 
+header .box{
+  transform: scale(.4);
+}
+
+@media (min-width: 650px){
+  header .box{
+    transform: scale(.8);
+  }
+}
+
+@media (min-width: 850px){
+  header .box{
+    transform: scale(1);
+  }
+}
+
 .neon {
   filter: drop-shadow(0 0 10px #26ff00) drop-shadow(5px 5px 0px black);
 }
+
+
 
 .subtitle path{
   fill: indigo;
   stroke: green;
   stroke-width: 2;
 }
-  
+ 
+/* 
 .site-subtitle,
 .site-title{
   color: antiquewhite;
@@ -117,42 +143,92 @@ header {
     font-size: 2.5em;
   }
 }
-  
-/* --- Projects Section Properties --- */
+*/
+
+/* --- Section Properties --- */
+.nav-space{
+height: calc(10px + 2em);
+}
+
+.about,
+.contact,
 .projects{
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .5rem;
   color: bisque;
-  width: 80vw;
+  min-height: 100vh;
+  width: 90vw;
   
 }
-  
+
+
+.about h2,
+.contact h2,
 .projects h2 {
   font-family: 'Irish Grover', cursive;
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: .5em;
 }
-  
-.projects-images {
+
+.about .about-image{
+  text-align: center;
+  object-fit: cover;
+  clip-path: polygon(0 33.3%, 0 66.6%, 50% 100%, 100% 66.6%, 100% 33.3%, 50% 0);
+  margin-bottom: .5em;
+}
+
+.about-image img{
+  height: 20rem;
+  width: calc(30rem*.8);
+}
+
+.about p {
+  font-family: 'Josefin Sans', sans-serif;
+  text-indent: 2em;
+  text-align: justify;
+  padding-bottom: .8em;
+}
+
+.grid {
   display: grid;
-  gap: 2em;
-  grid-template-columns: repeat(1, 300px);
-  
+}
+
+.contact .grid,
+.project .grid {
+  grid-template-columns: repeat(1, 30rem);
 }
 
 .projects figure{
   text-align: center;
   background-color: blue;
+  margin-bottom: 1em;
 }
-  
+
 .img-projects {
-  height: 200px;
-  width: 300px;
+  height: 20rem;
+  width: 30rem;
   object-fit: cover;
   object-position: left bottom;
-
+  
   border-radius: .5em;
 } 
-  
+
+.contact{
+  min-height: 25vh;
+}
+
+.contact a{
+  font-size: 3em;
+  line-height: 1.5em;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact a:hover{
+  text-shadow: 0 0 .1em black, 0 0 .5em #0A0, 0 0 1em rgb(0, 75, 0);
+}
   
 /* --- Footer Properties --- */
 footer {
@@ -165,6 +241,12 @@ footer {
     
   background: linear-gradient(#0000, #000 25% 75%, #0000);
   box-shadow: 0em 0em 0.5em 0.05em #0e680e, inset 0em 0em 0.5em 0.05em #0e680e;
+}
+
+footer h5 {
+  color: antiquewhite;
+  font-size: .7em;
+  line-height: .8em;
 }
 
 footer a {
