@@ -174,13 +174,20 @@ height: calc(10px + 2em);
 .about .about-image{
   text-align: center;
   object-fit: cover;
-  clip-path: polygon(0 33.3%, 0 66.6%, 50% 100%, 100% 66.6%, 100% 33.3%, 50% 0);
+  width: calc(30rem*.8);
+  clip-path: polygon(0 25%, 0 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0);
   margin-bottom: .5em;
+}
+@media(min-width: 720px){
+  .about .about-image{
+    text-align: unset;
+    float: right;
+    margin-left: 1em;
+  }
 }
 
 .about-image img{
   height: 20rem;
-  width: calc(30rem*.8);
 }
 
 .about p {
@@ -192,6 +199,8 @@ height: calc(10px + 2em);
 
 .grid {
   display: grid;
+  align-content: space-around;
+  justify-content: space-around;
 }
 
 .contact .grid,
