@@ -40,8 +40,14 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   }
+
+@media(max-height: 420px){
+  header{
+    height: 100vh;
+  }
+}
   
-  
+/* --- Menu properties --- */
 .menu{
   position: fixed;
   top: 1em;
@@ -88,6 +94,7 @@ header {
   background-color: cornsilk;
 }
 
+/* --- Tilte properties and animations --- */
 header .box{
   transform: scale(.4);
 }
@@ -172,7 +179,6 @@ header .box{
 
 @keyframes letter-in{
   to{
-    /*stroke-dasharray: 0;*/
     stroke-dashoffset: 0;
   }
 }
@@ -236,25 +242,42 @@ height: calc(10px + 2em);
   margin-bottom: .5em;
 }
 
-.about .about-image{
+.about .content{
   text-align: center;
-  object-fit: cover;
-  clip-path: polygon(0 25%, 0 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0);
+}
+
+.about .about-image{
+  display: inline-block;
+  width: calc(30rem*.8);
   margin-bottom: .5em;
+}
+
+.about img{
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
 }
 
 @media(min-width: 720px){
   .about .about-image{
+    clip-path: polygon(0 25%, 0 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0);
     text-align: unset;
     float: right;
     margin-left: 1em;
   }
+
+  .about img{
+    border-radius: 0;  
+  }
 }
 
-.about-image img{
-  height: 20rem;
-  width: calc(30rem*.8);
+@media(min-width: 960px){
+  .about img{
+    height: 24rem;
+    width: 24rem; 
+  }
 }
+
 
 .about p {
   font-family: 'Josefin Sans', sans-serif;
