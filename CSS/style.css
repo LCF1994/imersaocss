@@ -23,7 +23,6 @@ a:hover{
 /* --- Body Properties --- */
 body {
   background-image: url("../images/main-background.jpg");
-  background-repeat: no-repeat;
   background-position: center;
   background-size: 100vw 100vh;
   background-color: black;
@@ -75,6 +74,15 @@ header {
   transition: color 1.5s, background-color 2s;
 }
 
+@media(max-width: 420px){
+  .menu ul {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 .menu a:hover{
   color: #000;
   background-color: cornsilk;
@@ -96,54 +104,112 @@ header .box{
   }
 }
 
-.neon {
-  filter: drop-shadow(0 0 10px #26ff00) drop-shadow(5px 5px 0px black);
+.title path:nth-child(1){
+  stroke-dasharray: 295px;
+  stroke-dashoffset: 295px;
+  animation: letter-in 2s ease-in-out .2s forwards;
 }
 
+.title path:nth-child(2){
+  stroke-dasharray: 392px;
+  stroke-dashoffset: 392px;
+  animation: letter-in 2s ease-in-out .4s forwards;
+}
 
+.title path:nth-child(3){
+  stroke-dasharray: 298px;
+  stroke-dashoffset: 298px;
+  animation: letter-in 2s ease-in-out .8s forwards;
+}
+
+.title path:nth-child(4){
+  stroke-dasharray: 295px;
+  stroke-dashoffset: 295px;
+  animation: letter-in 2s ease-in-out 1s forwards;
+}
+
+.title path:nth-child(5){
+  stroke-dasharray: 379px;
+  stroke-dashoffset: 379px;
+  animation: letter-in 2s ease-in-out 1.2s forwards;
+}
+
+.title path:nth-child(6){
+  stroke-dasharray: 360px;
+  stroke-dashoffset: 360px;
+  animation: letter-in 2s ease-in-out 1.4s forwards;
+}
+
+.title path:nth-child(7){
+  stroke-dasharray: 295px;
+  stroke-dashoffset: 295px;
+  animation: letter-in 2s ease-in-out 1.6s forwards;
+}
+
+.title path:nth-child(8){
+  stroke-dasharray: 588px;
+  stroke-dashoffset: 588px;
+  animation: letter-in 2s ease-in-out 1.8s forwards;
+}
+
+.title path:nth-child(9){
+  stroke-dasharray: 302px;
+  stroke-dashoffset: 302px;
+  animation: letter-in 2s ease-in-out 2s forwards;
+}
+
+.title path:nth-child(10){
+  stroke-dasharray: 295px;
+  stroke-dashoffset: 295px;
+  animation: letter-in 2s ease-in-out 2.2s forwards;
+}
+
+.title path:nth-child(11){
+  stroke-dasharray: 379px;
+  stroke-dashoffset: 379px;
+  animation: letter-in 2s ease-in-out 2.4s forwards;
+}
+
+@keyframes letter-in{
+  to{
+    /*stroke-dasharray: 0;*/
+    stroke-dashoffset: 0;
+  }
+}
+
+.neon {
+  animation: neon-light 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) 4s forwards;
+}
+
+@keyframes neon-light {
+  
+  70%{
+    filter: drop-shadow(0 0 10px #26ff00) drop-shadow(5px 5px 0px black);
+  }
+  85%{
+    filter: none;
+  }
+  100%{
+    filter: drop-shadow(0 0 10px #26ff00) drop-shadow(5px 5px 0px black);
+  }
+}
 
 .subtitle path{
-  fill: indigo;
   stroke: green;
-  stroke-width: 2;
-}
- 
-/* 
-.site-subtitle,
-.site-title{
-  color: antiquewhite;
-  font-family: 'Irish Grover', cursive;
-  font-style: italic;
-  text-align: center;
-
-  transform: rotate(-15deg);
-    
-  text-shadow: 0.22rem 0 0.68rem #ff8700, 
-              -0.22rem 0 0.68rem #26ff00, 
-               0 -0.22rem 0.68rem #ea960a,
-               0 0.22rem 0.68rem white,
-               .1em .2em 2px black;
+  stroke-width: 0;
+  animation: subtitle-anim 2s ease 3s forwards;
 }
 
-.site-title {
-  font-size: 3em;
-  padding-bottom: .5em;
-}
-  
-.site-subtitle{
-  font-size: 1.5em;
-}
-
-@media (min-width: 600px){
-  .site-title {
-    font-size: 4em;
+@keyframes subtitle-anim{
+  from{
+    fill:transparent;
   }
-    
-  .site-subtitle{
-    font-size: 2.5em;
+  to{
+    fill: indigo;
+    stroke-width: 2;
   }
 }
-*/
+
 
 /* --- Section Properties --- */
 .nav-space{
@@ -162,7 +228,6 @@ height: calc(10px + 2em);
   
 }
 
-
 .about h2,
 .contact h2,
 .projects h2 {
@@ -174,10 +239,10 @@ height: calc(10px + 2em);
 .about .about-image{
   text-align: center;
   object-fit: cover;
-  width: calc(30rem*.8);
   clip-path: polygon(0 25%, 0 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0);
   margin-bottom: .5em;
 }
+
 @media(min-width: 720px){
   .about .about-image{
     text-align: unset;
@@ -188,6 +253,7 @@ height: calc(10px + 2em);
 
 .about-image img{
   height: 20rem;
+  width: calc(30rem*.8);
 }
 
 .about p {
@@ -204,9 +270,28 @@ height: calc(10px + 2em);
 }
 
 .contact .grid,
-.project .grid {
+.projects .grid {
   grid-template-columns: repeat(1, 30rem);
 }
+
+@media(min-width:480px){
+  .contact .grid{
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media(min-width:720px){
+  .projects .grid{
+    grid-template-columns: repeat(2, 40%);
+  }
+}
+
+@media(min-width:960px){
+  .contact .grid{
+    grid-template-columns: repeat(4, 25%);
+  }
+}
+
 
 .projects figure{
   text-align: center;
@@ -235,6 +320,7 @@ height: calc(10px + 2em);
   margin-right: auto;
 }
 
+.contact a:active,
 .contact a:hover{
   text-shadow: 0 0 .1em black, 0 0 .5em #0A0, 0 0 1em rgb(0, 75, 0);
 }
