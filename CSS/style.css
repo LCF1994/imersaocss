@@ -188,12 +188,15 @@ header .box{
 }
 
 @keyframes neon-light {
-  
+
+  0%{
+    filter: drop-shadow(5px 5px 10px black);
+  }
   70%{
     filter: drop-shadow(0 0 10px #26ff00) drop-shadow(5px 5px 0px black);
   }
   85%{
-    filter: none;
+    filter: drop-shadow(5px 5px 0px black);
   }
   100%{
     filter: drop-shadow(0 0 10px #26ff00) drop-shadow(5px 5px 0px black);
